@@ -1,0 +1,117 @@
+/* 1. Root Variables & Reset */
+:root {
+    --primary-color: #2563eb;
+    --dark-bg: #1e293b;
+    --light-text: #f8fafc;
+    --gray: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f1f5f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Header & Nav */
+header {
+    background: var(--dark-bg);
+    color: white;
+    padding: 1.5rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 3. Hero Section */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* 4. Skills Grid (Box Model Application) */
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 80px;
+}
+
+.skill-card {
+    background: white;
+    flex: 1;
+    padding: 30px; /* Internal space */
+    border-top: 5px solid var(--primary-color); /* Top border */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 5. Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 6. Media Query (Responsive Design) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplifies mobile view */
+    }
+
+    .skills-grid {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
